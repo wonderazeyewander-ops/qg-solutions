@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schedule Time — QG Solutions</title>
+<!-- UNLISTED PAGE: not linked from the main site, and asks search engines not to index it. -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#F5F3EF">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <header class="book-hero">
+    <div class="wrap">
+      <img class="logo" src="../assets/logo.png" alt="QG Solutions">
+      <h1 class="headline">Schedule time with QG Solutions</h1>
+      <p>Choose a time that works for you. You'll receive a confirmation and calendar invite right away.</p>
+    </div>
+  </header>
+
+  <main class="book-embed">
+    <div id="calendly-embed" style="min-width:320px;height:760px;"></div>
+    <p class="fallback"><noscript>JavaScript is needed to show the calendar. </noscript>Having trouble? <a id="calendly-fallback" href="https://calendly.com/YOUR-USERNAME/30min" target="_blank" rel="noopener">Open the scheduler in a new tab</a>.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 QG Solutions</p>
+  </footer>
+
+  <!-- EDIT THIS ONE LINE: your Calendly event link (Calendly > Event Types > copy link) -->
+  <script>var CALENDLY_URL = "https://calendly.com/YOUR-USERNAME/30min";</script>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script>
+    document.getElementById('calendly-fallback').href = CALENDLY_URL;
+    window.addEventListener('load', function () {
+      if (!window.Calendly) return;
+      Calendly.initInlineWidget({
+        url: CALENDLY_URL + '?hide_gdpr_banner=1&background_color=f5f3ef&text_color=161616&primary_color=a6772c',
+        parentElement: document.getElementById('calendly-embed')
+      });
+    });
+  </script>
+
+</body>
+</html>
